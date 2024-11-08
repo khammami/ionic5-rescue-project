@@ -59,10 +59,10 @@ javac -version
 4. Set Android environment variables:
 
     ```sh
-    echo 'export ANDROID_HOME=$HOME/Android/Sdk' >> ~/.bashrc
-    echo 'export PATH=$PATH:$ANDROID_HOME/tools' >> ~/.bashrc
-    echo 'export PATH=$PATH:$ANDROID_HOME/tools/bin' >> ~/.bashrc
-    echo 'export PATH=$PATH:$ANDROID_HOME/platform-tools' >> ~/.bashrc
+    echo 'export ANDROID_SDK_ROOT=$HOME/Android/Sdk' >> ~/.bashrc
+    echo 'export PATH=$PATH:$ANDROID_SDK_ROOT/tools' >> ~/.bashrc
+    echo 'export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin' >> ~/.bashrc
+    echo 'export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools' >> ~/.bashrc
     source ~/.bashrc
     ```
 
@@ -143,7 +143,7 @@ ionic cordova build android --prod
 ```sh
 # Check all environment variables
 echo $JAVA_HOME
-echo $ANDROID_ROOT
+echo $ANDROID_SDK_ROOT
 echo $PATH
 
 # Verify tools

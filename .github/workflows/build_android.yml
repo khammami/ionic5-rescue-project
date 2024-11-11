@@ -37,6 +37,11 @@ jobs:
         with:
           cache-read-only: false
 
+      - name: Install Android SDK components
+        run: |
+          sdkmanager --install "platform-tools" "platforms;android-34" "build-tools;34.0.0"
+          yes | sdkmanager --licenses
+
       - name: NodeJS v14 setup
         uses: actions/setup-node@v4
         with:
@@ -45,7 +50,7 @@ jobs:
 
       - name: Instal dependencies
         run: npm ci
-      
+
       - name: Install Ionic CLI 5
         run: npm install -g ionic
 

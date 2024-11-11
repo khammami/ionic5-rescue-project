@@ -45,7 +45,10 @@ jobs:
 
       - name: Instal dependencies
         run: npm ci
-
+      
+      - name: Install Ionic CLI 5
+        run: npm install -g ionic
+        
       - name: Print ionic info
         run: ionic info
 

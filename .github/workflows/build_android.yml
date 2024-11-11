@@ -30,7 +30,6 @@ jobs:
         with:
           java-version: "17"
           distribution: "temurin"
-          cache: "gradle"
 
       # Let gradle action handle all cache reated to gradle operations
       - name: Gradle setup/cache

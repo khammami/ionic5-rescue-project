@@ -48,18 +48,18 @@ jobs:
       
       - name: Install Ionic CLI 5
         run: npm install -g ionic
-        
+
       - name: Print ionic info
         run: ionic info
-
-      - name: Check Cordova Requirements
-        run: ionic cordova requirements
 
       - name: Remove Android platform
         run: ionic cordova platform remove android
 
       - name: Add Android platform
         run: ionic cordova platform add android@13.0.0
+
+      - name: Check Cordova Requirements
+        run: ionic cordova requirements
 
       - name: Build Android
         run: ionic cordova build android --debug
